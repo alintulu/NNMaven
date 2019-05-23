@@ -110,8 +110,9 @@ public class Main {
         
         List<Double> trainingLoss = network.trainNetwork(sineTest(100), 100, 0.01, 1000, false); // trainingdata dataSetSize learningrate numIter printError
         
+        System.out.println("Training loss:");
         for (Double tL : trainingLoss) {
-            System.out.println(tL);
+            System.out.println(" " + tL);
         }
         
         double[] testLoss = network.testNetwork(sineTest(50), 50); // trainingdata dataSetSize

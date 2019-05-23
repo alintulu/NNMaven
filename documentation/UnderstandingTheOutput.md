@@ -22,7 +22,7 @@ Where
 
 # Error
 
-The error is a nice metric when evaluating how closely the predicted points equals the true values. Luckily due to backpropagating the network requiring knowledge of the error for every individual node, we can easily calculate the total error of the network. You can read more about backpropagation [here](https://github.com/alintulu/NeuralNetwork/blob/master/documentation/UnderstandingTheNetwork.md). 
+The error is a nice metric when evaluating how closely the predicted points equals the true values. Luckily due to backpropagating the network requiring knowledge of the error for every individual node, we can easily calculate the total error of the network. You can read more about backpropagation [here](https://github.com/alintulu/NNMaven/blob/master/documentation/UnderstandingTheNetwork.md). 
 
 The total error is simply the weighted sum over the errors of all the nodes, where the weights are the weights of the edges. The error of each node is updated at every iteration of the network, and is backpropagated from the output node. The first error is calculated by comparing the true value of the output to the predicted value and then propagated back to the input nodes, multiplied by every weight edge it passes. 
 

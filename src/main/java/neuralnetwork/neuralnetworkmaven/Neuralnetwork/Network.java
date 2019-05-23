@@ -91,7 +91,7 @@ public class Network {
         FileWriter fw;
 
         try {
-            fw = new FileWriter(new File("training01.txt"));
+            fw = new FileWriter(new File("output/training01.txt"));
 
             for (int i = 0; i < numIterations; i++) {
                 
@@ -150,7 +150,7 @@ public class Network {
         FileWriter fw;
 
         try {
-            fw = new FileWriter(new File("testing01.txt"));
+            fw = new FileWriter(new File("output/testing01.txt"));
 
             // inputData is the input the network will learn from
             // trueVal is the correct answer of the inputData, the network will use this to caluclate error and with that update weights
