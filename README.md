@@ -19,38 +19,19 @@ to employ the network and basic knowledge of the network and output is located i
   2. [Basic knowledge of a neural network](https://github.com/alintulu/NNMaven/blob/master/documentation/UnderstandingTheNetwork.md)
   2. [Understanding the output of the network](https://github.com/alintulu/NNMaven/blob/master/documentation/UnderstandingTheOutput.md)
   
+## Running 
+
+To compile and run the code, in the root directory (current) perform the following command
+
+```
+mvn compile exec:java -Dexec.mainClass=neuralnetwork.neuralnetworkmaven.Neuralnetwork.Main
+```
+
 ## Testing
 
-The test code is located in the folder [test](https://github.com/alintulu/NNMaven/tree/master/src/test/java/neuralnetwork/neuralnetworkmaven.
+The test code is located in the folder [test](https://github.com/alintulu/NNMaven/tree/master/src/test/java/neuralnetwork/neuralnetworkmaven)
 For testing the program, the following command can be performed in the root directory
 
 ```
 mvn test
 ```
-
-In addition, the test coverage report can be created with the command
-
-```
-mvn test jacoco: report
-```
-
-## Checkstyle
-
-The Checkstyle Plugin generates a report regarding the code style used. It performs an analysis and 
-generates if necessary a report on violation. The checks specified by the `checkstyle.xml` file are executed with the command
-
-```
-mvn jxr: jxr checkstyle: checkstyle 
-```
-
-And error messages are saved in the `target/site/checkstyle.html` file.
-
-## Javadoc
-
-It is possible to generate the Javadoc files for the project with the command
-
-```
-mvn javadoc:javadoc
-```
-
-It executes the standard Javadoc tool and supports the parameters used by the tool.
