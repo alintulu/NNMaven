@@ -64,3 +64,7 @@ Error : 0.0018227473748430889
 Loss : 0.07236535558734761
 Error : 0.2268715327528046
 ```
+
+### Plot of validation
+
+![Validation plot](https://github.com/alintulu/NNMaven/blob/master/documentation/images/training_output.png)
