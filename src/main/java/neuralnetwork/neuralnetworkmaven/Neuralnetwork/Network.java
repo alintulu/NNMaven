@@ -114,12 +114,17 @@ public class Network {
                         epochLoss += Math.pow(trueVal - output, 2);
                     }
                     
-                    if (i == numIterations - 1) {
-                        errorSum = Math.abs(trueVal - output);
+                    if (i == 0 || i == numIterations - 1) {
+                        
+                        fw.write(String.format("%4.3f %4.3f %4.3f\n", inputData[0], output, trueVal));
+                        
+                        if (i == numIterations - 1) {
+                            errorSum = Math.abs(trueVal - output);
+                        }
+                        
                     }
                     
-                    fw.write(String.format("%4.3f %4.3f %4.3f\n", inputData[0], output, trueVal));
-
+                    
                     backPropagate(trueVal, printError);
                     updateWeights(learningRate);
                 }

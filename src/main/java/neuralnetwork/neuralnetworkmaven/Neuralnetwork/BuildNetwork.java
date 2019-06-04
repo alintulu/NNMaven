@@ -12,9 +12,23 @@ import java.util.List;
  *
  * @author alintulu
  */
-public class Main {
+public class BuildNetwork {
 
-    public static Network makeNetwork(int numInputs, int numHiddenLayers, int numInEachLayer) {
+    private static Network network;
+    private static List<Double> trainingLoss;
+    private static double[] testingLoss;
+
+    public BuildNetwork() {
+        this.network = null;
+        this.trainingLoss = null;
+        this.testingLoss = null;
+    }
+
+    public static void setNetwork(Network network) {
+        BuildNetwork.network = network;
+    }
+
+    public static Integer makeNetwork(int numInputs, int numHiddenLayers, int numInEachLayer) {
 
         // create neural network
         Network network = new Network();
@@ -78,8 +92,9 @@ public class Main {
             Edge edge = new Edge(node, outputNode);
         }
 
-        return network;
+        setNetwork(network);
 
+        return 0;
     }
 
     public static Double func(double x) {
@@ -91,7 +106,7 @@ public class Main {
         double[] domain = new double[numValues];
 
         for (int i = 0; i < numValues; i++) {
-            domain[i] = Math.random() * Math.PI * 4;
+            domain[i] = Math.random() * Math.PI * 1.5;
         }
 
         List<trainingData> sineData = new ArrayList<>();
@@ -104,12 +119,27 @@ public class Main {
         return sineData;
     }
 
+    public static List<Double> trainNetwork(Integer dataSize, Double learningRate, Integer numIter, Boolean printError) {
+
+        List<Double> temp = BuildNetwork.network.trainNetwork(sineTest(dataSize), dataSize, learningRate, numIter, printError);
+        return temp;
+
+    }
+
+    public static double[] testNetwork(Integer dataSize) {
+
+        double[] temp = BuildNetwork.network.testNetwork(sineTest(dataSize), dataSize);
+        return temp;
+        
+    }
+
     public static void main(String[] args) {
 
-        Network network = makeNetwork(1, 3, 10); // numInputNodes numHiddenLayers numInEachLayer
-        
-        List<Double> trainingLoss = network.trainNetwork(sineTest(100), 100, 0.01, 1000, false); // trainingdata dataSetSize learningrate numIter printError
-        
+        //makeNetwork(1, 3, 10); // numInputNodes numHiddenLayers numInEachLayer
+        //trainNetwork(100, 0.25, 1000, false); // trainingdata dataSetSize learningrate numIter printError
+        //StartScreen.main(args);
+        //Plot.main(args);
+        /*
         System.out.println("Training loss:");
         for (Double tL : trainingLoss) {
             System.out.println(" " + tL);
@@ -117,8 +147,28 @@ public class Main {
         
         double[] testLoss = network.testNetwork(sineTest(50), 50); // trainingdata dataSetSize
         
-        System.out.println("Test loss : " + testLoss[0] + "\nTest error : " + testLoss[1]);
+        System.out.println("\nTest loss : " + testLoss[0] + "\nTest error : " + testLoss[1]);
+         */
+    }
 
+    public static void setTrainingLoss(List<Double> trainingLoss) {
+        BuildNetwork.trainingLoss = trainingLoss;
+    }
+
+    public static void setTestingLoss(double[] testingLoss) {
+        BuildNetwork.testingLoss = testingLoss;
+    }
+
+    public static Network getNetwork() {
+        return network;
+    }
+
+    public static double[] getTestingLoss() {
+        return testingLoss;
+    }
+
+    public static List<Double> getTrainingLoss() {
+        return trainingLoss;
     }
 
 }
