@@ -24,7 +24,7 @@ to employ the network and basic knowledge of the network and output is located i
 To compile and run the code, in the root directory (current) perform the following command
 
 ```
-mvn compile exec:java -Dexec.mainClass=neuralnetwork.neuralnetworkmaven.Neuralnetwork.Main
+mvn compile exec:java -Dexec.mainClass=UI.Main
 ```
 
 ## Testing
