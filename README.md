@@ -27,6 +27,8 @@ To compile and run the code, in the root directory (current) perform the followi
 mvn compile exec:java -Dexec.mainClass=UI.Main
 ```
 
+![UI image](https://github.com/alintulu/NNMaven/blob/master/documentation/images/UI.png)
+
 ## Testing
 
 The test code is located in the folder [test](https://github.com/alintulu/NNMaven/tree/master/src/test/java/neuralnetwork/neuralnetworkmaven)
