@@ -29,6 +29,7 @@ mvn compile exec:java -Dexec.mainClass=UI.Main
 ![start screen](https://github.com/alintulu/NNMaven/blob/master/documentation/images/UIstartscreen.png)
 ![random points](https://github.com/alintulu/NNMaven/blob/master/documentation/images/UIrandompoints.png)
 ![trained points](https://github.com/alintulu/NNMaven/blob/master/documentation/images/UI.png)
+![loss and error](https://github.com/alintulu/NNMaven/blob/master/documentation/images/UIlosserror.png)
 
 ## Testing
 
