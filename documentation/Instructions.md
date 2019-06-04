@@ -6,7 +6,7 @@ If you want to know more about all the parameters mentioned here, check out [Und
 
 When running the program the first thing you are asked to do is fill in all the variables for building, training and testing the network.
 
-Building the network is done in the file [Main.java](https://github.com/alintulu/NNMaven/blob/master/src/main/java/neuralnetwork/neuralnetworkmaven/Neuralnetwork/Main.java). The method to do so is called `makeNetwork()` and is called from the main function.
+Building the network is done in the file [BuildNetwork.java](https://github.com/alintulu/NNMaven/blob/master/src/main/java/neuralnetwork/neuralnetworkmaven/Neuralnetwork/BuildNetwork.java). The method to do so is called `makeNetwork()` and is called from the main function.
 
 The method takes three inputs.
 
@@ -72,4 +72,4 @@ The script will create two .txt files
 
 Where input is the input given to the network, output is the predicted value of the network and true_value is the label or true value of the input.
 
-The creating of the files happens [here](https://github.com/alintulu/NNMaven/blob/master/src/main/java/neuralnetwork/neuralnetworkmaven/Neuralnetwork/Network.java#L121) for training and [here](https://github.com/alintulu/NNMaven/blob/master/src/main/java/neuralnetwork/neuralnetworkmaven/Neuralnetwork/Network.java#L167) for testing/validating. The script will also print the loss and error of training and testing. If you want to read more about the metrics of evaluting the model, read [UnderstandingTheOutput](https://github.com/alintulu/NNMaven/blob/master/documentation/UnderstandingTheOutput.md)  
+The script will also print the loss and error of training and testing. If you want to read more about the metrics of evaluting the model, read [UnderstandingTheOutput](https://github.com/alintulu/NNMaven/blob/master/documentation/UnderstandingTheOutput.md)  
